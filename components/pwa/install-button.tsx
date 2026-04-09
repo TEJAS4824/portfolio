@@ -9,16 +9,17 @@ export function InstallButton() {
   const { isInstallable, isInstalled, installApp } = usePWA()
 
   if (isInstalled) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm"
-      >
-        <Check className="w-4 h-4" />
-        <span>Installed</span>
-      </motion.div>
-    )
+    return null
+    //  (
+    //   <motion.div
+    //     initial={{ opacity: 0, scale: 0.8 }}
+    //     animate={{ opacity: 0, scale: 1 }}
+    //     className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm"
+    //   >
+    //     <Check className="w-4 h-4" />
+    //     <span>Installed</span>
+    //   </motion.div>
+    // )
   }
 
   if (!isInstallable) {
