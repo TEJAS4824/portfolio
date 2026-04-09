@@ -4,13 +4,13 @@
 // ============================================
 
 export const personalInfo = {
-  name: "John Doe",
-  title: "JavaScript Developer",
-  tagline: "Building modern web experiences with JavaScript",
+  name: "Tejas Mistry",
+  title: "CSE Student",
+  tagline: "Building scalable apps, immersive XR experiences, and intelligent systems",
   description:
-    "I'm a passionate JavaScript developer specializing in building exceptional digital experiences. Currently focused on creating accessible, performant web applications using modern frameworks and best practices.",
-  location: "San Francisco, CA",
-  email: "john@example.com",
+    "I’m a Computer Engineering student with hands-on experience across 3+ real-world projects in full-stack development, AR/VR, and intelligent systems. I’ve built a secure social media platform using React, Node.js, and PostgreSQL with real-time features, developed an Air Traffic Control simulation using Unity XR based on a Smart India Hackathon problem statement, and engineered a vehicle detection system integrating MobileNet-SSD with ESP8266 for smart traffic applications. I also worked as an Academic Associate in C++, mentoring 20+ students in programming and problem-solving. I enjoy building scalable, real-world solutions using modern technologies.",
+  location: "Vadodara, Gujarat, India",
+  email: "tejasmistry2017@gmail.com",
   availability: "Open to opportunities",
   image: "/images/profile.jpg", // Update this with your own profile image
 }
