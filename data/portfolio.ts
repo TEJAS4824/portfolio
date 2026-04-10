@@ -8,7 +8,7 @@ export const personalInfo = {
   title: "CSE Student",
   tagline: "Building scalable apps, immersive XR experiences, and intelligent systems",
   description:
-    "I’m a Computer Engineering student with hands-on experience across 3+ real-world projects in full-stack development, AR/VR, and intelligent systems. I’ve built a secure social media platform using React, Node.js, and PostgreSQL with real-time features, developed an Air Traffic Control simulation using Unity XR based on a Smart India Hackathon problem statement, and engineered a vehicle detection system integrating MobileNet-SSD with ESP8266 for smart traffic applications. I also worked as an Academic Associate in C++, mentoring 20+ students in programming and problem-solving. I enjoy building scalable, real-world solutions using modern technologies.",
+    "I’m a Computer Engineering student with hands-on experience across 3+ real-world projects in full-stack development, AR/VR, and intelligent systems.",
   location: "Vadodara, Gujarat, India",
   email: "tejasmistry2017@gmail.com",
   availability: "Open to opportunities",
@@ -17,28 +17,32 @@ export const personalInfo = {
 
 export const aboutMe = {
   paragraphs: [
-    "I'm a developer who loves crafting pixel-perfect, accessible user interfaces that blend thoughtful design with robust engineering. My work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.",
-    "With several years of experience in web development, I've had the opportunity to work across various settings — from startups to established companies. I enjoy solving complex problems and turning ideas into elegant, functional code.",
-    "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    "I’m a developer focused on building real-world, impactful applications across full-stack development, AR/VR, and intelligent systems. My work combines strong backend logic with clean and functional user experiences.",
+    "I have built systems ranging from a secure social media platform with authentication and real-time features to an immersive Air Traffic Control simulation in Unity XR based on Smart India Hackathon problem statements.",
+    "I also enjoy working on intelligent and hardware-integrated solutions, such as a vehicle detection system using MobileNet-SSD and ESP8266 for smart traffic management.",
+    "Apart from development, I have experience mentoring students as a C++ Academic Associate, helping them strengthen problem-solving and programming fundamentals.",
   ],
   highlights: [
-    "5+ years of JavaScript experience",
-    "Full-stack development expertise",
-    "Open source contributor",
-    "Performance optimization specialist",
+    "3+ real-world projects (Web, AR/VR, AI/IoT)",
+    "Full-stack development with React, Node.js & PostgreSQL",
+    "Built SIH-based Air Traffic Control VR simulation",
+    "Mentored 20+ students in C++",
   ],
 }
 
 export const skills = [
-  { name: "JavaScript", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "React", level: 92 },
-  { name: "Next.js", level: 88 },
+  { name: "JavaScript", level: 90 },
+  { name: "Java", level: 85 },
+  { name: "C++", level: 80 },
+  { name: "React.js", level: 88 },
   { name: "Node.js", level: 85 },
-  { name: "TailwindCSS", level: 90 },
-  { name: "GraphQL", level: 75 },
+  { name: "Express.js", level: 85 },
   { name: "PostgreSQL", level: 80 },
+  { name: "Unity (XR)", level: 82 },
+  { name: "Android (Java)", level: 75 },
+  { name: "Computer Vision (MobileNet-SSD)", level: 75 },
 ]
+
 
 export const projects = [
   {
