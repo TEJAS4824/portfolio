@@ -2,7 +2,6 @@
 
 import { personalInfo, socialLinks } from "@/data/portfolio"
 import { Github, Linkedin, Mail, MapPin, ArrowRight, Twitter } from "lucide-react"
-import Link from "next/link"
 import { SectionWrapper } from "@/components/ui/section-wrapper"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { motion } from "framer-motion"
@@ -69,14 +68,14 @@ export function Contact() {
           viewport={{ once: true }}
         >
           <MagneticButton className="inline-block cursor-pointer mb-16">
-            <Link
+            <a
               href={socialLinks.email}
               className="group inline-flex items-center gap-3 px-10 py-5 text-lg font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30"
             >
               <Mail className="w-5 h-5" />
               Say Hello
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </MagneticButton>
         </motion.div>
 
@@ -100,7 +99,7 @@ export function Contact() {
                 transition={{ delay: 0.5 + i * 0.1, type: "spring", stiffness: 200 }}
                 viewport={{ once: true }}
               >
-                <Link
+                <a
                   href={social.href}
                   target={social.href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
@@ -108,7 +107,7 @@ export function Contact() {
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </Link>
+                </a>
               </motion.div>
             </MagneticButton>
           ))}

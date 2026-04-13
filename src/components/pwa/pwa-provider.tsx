@@ -1,12 +1,15 @@
 "use client"
 
 import { useEffect, useState, createContext, useContext, ReactNode } from "react"
+import { useRegisterSW } from 'virtual:pwa-register/react'
 
 interface PWAContextType {
   isInstallable: boolean
   isInstalled: boolean
   isOnline: boolean
   installApp: () => Promise<void>
+  updateServiceWorker: () => void
+  needRefresh: boolean
 }
 
 const PWAContext = createContext<PWAContextType>({
@@ -14,6 +17,8 @@ const PWAContext = createContext<PWAContextType>({
   isInstalled: false,
   isOnline: true,
   installApp: async () => {},
+  updateServiceWorker: () => {},
+  needRefresh: false,
 })
 
 export function usePWA() {
@@ -31,19 +36,20 @@ export function PWAProvider({ children }: { children: ReactNode }) {
   const [isOnline, setIsOnline] = useState(true)
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
 
-  useEffect(() => {
-    // Register service worker
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("[PWA] Service Worker registered:", registration.scope)
-        })
-        .catch((error) => {
-          console.error("[PWA] Service Worker registration failed:", error)
-        })
-    }
+  const {
+    offlineReady: [offlineReady, setOfflineReady],
+    needRefresh: [needRefresh, setNeedRefresh],
+    updateServiceWorker,
+  } = useRegisterSW({
+    onRegistered(r) {
+      console.log("[PWA] Service Worker registered")
+    },
+    onRegisterError(error) {
+      console.error("[PWA] Service Worker registration failed:", error)
+    },
+  })
 
+  useEffect(() => {
     // Check if already installed
     if (window.matchMedia("(display-mode: standalone)").matches) {
       setIsInstalled(true)
@@ -102,7 +108,14 @@ export function PWAProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <PWAContext.Provider value={{ isInstallable, isInstalled, isOnline, installApp }}>
+    <PWAContext.Provider value={{ 
+      isInstallable, 
+      isInstalled, 
+      isOnline, 
+      installApp,
+      updateServiceWorker,
+      needRefresh
+    }}>
       {children}
     </PWAContext.Provider>
   )

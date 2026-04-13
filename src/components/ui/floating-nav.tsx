@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { navigation } from "@/data/portfolio"
-import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { InstallButton } from "@/components/pwa/install-button"
 
@@ -13,8 +12,15 @@ export function FloatingNav() {
   const [activeSection, setActiveSection] = useState("")
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 100)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsVisible(window.scrollY > 100)
+          ticking = false
+        })
+        ticking = true
+      }
     }
 
     const handleSectionObserver = () => {
@@ -57,7 +63,7 @@ export function FloatingNav() {
           >
             <div className="flex items-center gap-1 px-2 py-2 rounded-full bg-card/80 backdrop-blur-xl border border-border/50 shadow-lg shadow-black/20">
               {navigation.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors ${
@@ -74,7 +80,7 @@ export function FloatingNav() {
                     />
                   )}
                   <span className="relative z-10">{item.name}</span>
-                </Link>
+                </a>
               ))}
               <div className="ml-2 pl-2 border-l border-border/50">
                 <InstallButton />
@@ -106,7 +112,7 @@ export function FloatingNav() {
           >
             <div className="flex flex-col gap-2">
               {navigation.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
@@ -117,7 +123,7 @@ export function FloatingNav() {
                   }`}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
               <div className="pt-2 mt-2 border-t border-border/50">
                 <InstallButton />

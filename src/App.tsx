@@ -7,20 +7,25 @@ import { Footer } from "@/components/sections/footer"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { FloatingNav } from "@/components/ui/floating-nav"
 import { InstallPrompt, OfflineIndicator } from "@/components/pwa/install-button"
+import { PWAProvider } from "@/components/pwa/pwa-provider"
 
-export default function Home() {
+function App() {
   return (
-    <main className="relative min-h-screen">
-      <AnimatedBackground />
-      <FloatingNav />
-      <OfflineIndicator />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
-      <InstallPrompt />
-    </main>
+    <PWAProvider>
+      <main className="relative min-h-screen">
+        <AnimatedBackground />
+        <FloatingNav />
+        <OfflineIndicator />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+        <InstallPrompt />
+      </main>
+    </PWAProvider>
   )
 }
+
+export default App

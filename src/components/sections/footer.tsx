@@ -2,7 +2,6 @@
 
 import { personalInfo, socialLinks } from "@/data/portfolio"
 import { Github, Linkedin, Heart } from "lucide-react"
-import Link from "next/link"
 import { motion } from "framer-motion"
 
 export function Footer() {
@@ -28,10 +27,10 @@ export function Footer() {
           
           <div className="flex flex-col items-center md:items-end gap-2">
             <p className="text-xs text-muted-foreground/60 font-mono">
-              Next.js + TailwindCSS + Framer Motion
+              Vite + TailwindCSS + Framer Motion
             </p>
             <div className="flex items-center gap-4">
-              <Link
+              <a
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -39,8 +38,8 @@ export function Footer() {
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -48,7 +47,7 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

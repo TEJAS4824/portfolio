@@ -1,7 +1,6 @@
 "use client"
 
 import { experience } from "@/data/portfolio"
-import Link from "next/link"
 import { ArrowUpRight, Briefcase } from "lucide-react"
 import { SectionWrapper, StaggerContainer, StaggerItem } from "@/components/ui/section-wrapper"
 import { motion } from "framer-motion"
@@ -59,7 +58,7 @@ export function Experience() {
                       <h3 className="text-xl font-semibold mb-2 flex flex-wrap items-center gap-2">
                         <span className="text-foreground">{job.role}</span>
                         <span className="text-muted-foreground/50">@</span>
-                        <Link
+                        <a
                           href={job.companyUrl}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -67,7 +66,7 @@ export function Experience() {
                         >
                           {job.company}
                           <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                        </Link>
+                        </a>
                       </h3>
                       
                       <p className="text-muted-foreground leading-relaxed mb-6">

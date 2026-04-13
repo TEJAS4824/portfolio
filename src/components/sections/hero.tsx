@@ -2,8 +2,6 @@
 
 import { personalInfo, socialLinks, navigation } from "@/data/portfolio"
 import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { CharacterReveal } from "@/components/ui/text-reveal"
@@ -14,8 +12,8 @@ export function Hero() {
       {/* Gradient Orbs */}
       <div className="absolute top-20 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-20 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-[150px] animate-pulse delay-1000" />
-      
-      <motion.header 
+
+      <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -33,13 +31,13 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i, duration: 0.4 }}
             >
-              <Link
+              <a
                 href={item.href}
                 className="relative text-sm text-muted-foreground hover:text-foreground transition-colors group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </Link>
+              </a>
             </motion.div>
           ))}
         </nav>
@@ -64,8 +62,8 @@ export function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-balance">
             <CharacterReveal text={personalInfo.name} delay={0.3} />
           </h1>
-        
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -73,8 +71,8 @@ export function Hero() {
           >
             {personalInfo.title}
           </motion.p>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
@@ -82,8 +80,8 @@ export function Hero() {
           >
             {personalInfo.tagline}
           </motion.p>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
@@ -92,35 +90,35 @@ export function Hero() {
             {personalInfo.description}
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
             className="flex flex-wrap items-center gap-3"
           >
             <MagneticButton className="cursor-pointer">
-              <Link
+              <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25"
               >
                 Get In Touch
                 <ArrowDown className="w-4 h-4 rotate-[-90deg]" />
-              </Link>
+              </a>
             </MagneticButton>
-            
+
             <MagneticButton className="cursor-pointer">
-              <Link
+              <a
                 href="/resume.pdf"
                 target="_blank"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-full border border-border hover:bg-card transition-colors"
               >
                 <Download className="w-4 h-4" />
                 Resume
-              </Link>
+              </a>
             </MagneticButton>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.4 }}
@@ -137,7 +135,7 @@ export function Hero() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.4 + i * 0.1, type: "spring", stiffness: 200 }}
                 >
-                  <Link
+                  <a
                     href={social.href}
                     target={social.href.startsWith("mailto") ? undefined : "_blank"}
                     rel="noopener noreferrer"
@@ -145,7 +143,7 @@ export function Hero() {
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
-                  </Link>
+                  </a>
                 </motion.div>
               </MagneticButton>
             ))}
@@ -170,22 +168,20 @@ export function Hero() {
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="absolute -inset-8 rounded-full border border-dashed border-primary/20"
           />
-          
+
           {/* Glow effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/10 rounded-full blur-2xl" />
-          
+
           {/* Image container */}
           <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-background shadow-2xl shadow-primary/20">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10 pointer-events-none" />
-            <Image
+            <img
               src={personalInfo.image}
               alt={personalInfo.name}
-              fill
-              className="object-cover"
-              priority
+              className="w-full h-full object-cover"
             />
           </div>
-          
+
           {/* Floating elements */}
           <motion.div
             animate={{ y: [-5, 5, -5] }}
@@ -204,14 +200,14 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.6 }}
         className="flex items-center gap-4 relative z-10"
       >
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-        <Link
+        <a
           href="#about"
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
         >
@@ -222,7 +218,7 @@ export function Hero() {
           >
             <ArrowDown className="w-4 h-4" />
           </motion.div>
-        </Link>
+        </a>
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
       </motion.div>
     </section>

@@ -56,26 +56,33 @@ export function AnimatedBackground() {
 
     const init = () => {
       particles = []
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000)
+      // Reduced density (from 15000 to 30000)
+      const particleCount = Math.floor((canvas.width * canvas.height) / 30000)
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle())
       }
     }
 
     const drawConnections = () => {
+      ctx!.lineWidth = 0.5
       for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x
-          const dy = particles[i].y - particles[j].y
-          const distance = Math.sqrt(dx * dx + dy * dy)
+        const p1 = particles[i]
+        // Cap connections per particle to avoid massive loops
+        let connections = 0
+        for (let j = i + 1; j < particles.length && connections < 5; j++) {
+          const p2 = particles[j]
+          const dx = p1.x - p2.x
+          const dy = p1.y - p2.y
+          const distanceSq = dx * dx + dy * dy // Use squared distance for speed
 
-          if (distance < 120) {
+          if (distanceSq < 14400) { // 120^2
+            const distance = Math.sqrt(distanceSq)
             ctx!.beginPath()
-            ctx!.moveTo(particles[i].x, particles[i].y)
-            ctx!.lineTo(particles[j].x, particles[j].y)
+            ctx!.moveTo(p1.x, p1.y)
+            ctx!.lineTo(p2.x, p2.y)
             ctx!.strokeStyle = `rgba(100, 200, 180, ${0.1 * (1 - distance / 120)})`
-            ctx!.lineWidth = 0.5
             ctx!.stroke()
+            connections++
           }
         }
       }
@@ -112,7 +119,7 @@ export function AnimatedBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 -z-10 pointer-events-none"
-      style={{ background: "transparent" }}
+      style={{ background: "transparent", willChange: "transform" }}
     />
   )
 }

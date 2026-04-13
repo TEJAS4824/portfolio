@@ -2,7 +2,6 @@
 
 import { projects } from "@/data/portfolio"
 import { Github, ExternalLink, Folder, ArrowRight, Code2 } from "lucide-react"
-import Link from "next/link"
 import { useState } from "react"
 import { SectionWrapper, StaggerContainer, StaggerItem } from "@/components/ui/section-wrapper"
 import { GlowingCard } from "@/components/ui/glowing-card"
@@ -61,7 +60,7 @@ export function Projects() {
                       Featured
                     </span>
                     <div className="flex items-center gap-2">
-                      <Link
+                      <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -69,9 +68,9 @@ export function Projects() {
                         aria-label={`View ${project.title} on GitHub`}
                       >
                         <Github className="w-4 h-4" />
-                      </Link>
+                      </a>
                       {project.liveUrl && (
-                        <Link
+                        <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -79,7 +78,7 @@ export function Projects() {
                           aria-label={`View ${project.title} live`}
                         >
                           <ExternalLink className="w-4 h-4" />
-                        </Link>
+                        </a>
                       )}
                     </div>
                   </div>
@@ -95,7 +94,7 @@ export function Projects() {
                     0{index + 1}.
                   </motion.span>
                   <h3 className="text-3xl font-bold mb-4 group">
-                    <Link 
+                    <a 
                       href={project.liveUrl || project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -103,7 +102,7 @@ export function Projects() {
                     >
                       {project.title}
                       <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                    </Link>
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                     {project.description}
@@ -119,7 +118,7 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex items-center gap-6">
-                    <Link
+                    <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -129,9 +128,9 @@ export function Projects() {
                       <Github className="w-5 h-5" />
                       <span>View Code</span>
                       <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                    </Link>
+                    </a>
                     {project.liveUrl && (
-                      <Link
+                      <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -141,7 +140,7 @@ export function Projects() {
                         <ExternalLink className="w-5 h-5" />
                         <span>Live Demo</span>
                         <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                      </Link>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -171,7 +170,7 @@ export function Projects() {
                           <Folder className="w-8 h-8" />
                         </div>
                         <div className="flex items-center gap-3">
-                          <Link
+                          <a
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -179,9 +178,9 @@ export function Projects() {
                             aria-label={`View ${project.title} on GitHub`}
                           >
                             <Github className="w-5 h-5" />
-                          </Link>
+                          </a>
                           {project.liveUrl && (
-                            <Link
+                            <a
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
@@ -189,14 +188,14 @@ export function Projects() {
                               aria-label={`View ${project.title} live`}
                             >
                               <ExternalLink className="w-5 h-5" />
-                            </Link>
+                            </a>
                           )}
                         </div>
                       </div>
                       <h4 className="text-xl font-semibold mb-3 hover:text-primary transition-colors">
-                        <Link href={project.liveUrl || project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <a href={project.liveUrl || project.githubUrl} target="_blank" rel="noopener noreferrer">
                           {project.title}
-                        </Link>
+                        </a>
                       </h4>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
                         {project.description}
