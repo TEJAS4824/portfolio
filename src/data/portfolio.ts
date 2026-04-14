@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "Console-based billing application developed in C to generate invoices and perform basic calculations.",
     image: "/projects/bill.jpg",
     technologies: ["C"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/Bill-Generator-C-Language-",
     featured: false,
   },
   {
