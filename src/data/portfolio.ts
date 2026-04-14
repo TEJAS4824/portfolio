@@ -3,7 +3,68 @@
 // Update all your information here!
 // ============================================
 
-export const personalInfo = {
+export interface PersonalInfo {
+  name: string;
+  title: string;
+  tagline: string;
+  description: string;
+  location: string;
+  email: string;
+  availability: string;
+  image: string;
+}
+
+export interface AboutMe {
+  paragraphs: string[];
+  highlights: string[];
+}
+
+export interface Skill {
+  name: string;
+  level: number;
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  featured: boolean;
+}
+
+export interface Experience {
+  id: number;
+  role: string;
+  company: string;
+  companyUrl: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
+
+export interface SocialLinks {
+  github: string;
+  linkedin: string;
+  twitter: string;
+  email: string;
+}
+
+export interface NavItem {
+  name: string;
+  href: string;
+}
+
+export interface SiteConfig {
+  title: string;
+  description: string;
+  url: string;
+  ogImage: string;
+}
+
+export const personalInfo: PersonalInfo = {
   name: "Tejas Mistry",
   title: "Crafting Software, AI Systems & AR/VR Experiences",
   tagline: "Creating Technology that solves problems, not just code that works.",
@@ -15,7 +76,7 @@ export const personalInfo = {
   image: "/images/profile.jpg", // Update this with your own profile image
 }
 
-export const aboutMe = {
+export const aboutMe: AboutMe = {
   paragraphs: [
     "I’m a developer focused on building real-world applications across full-stack development, AR/VR, and intelligent systems, combining strong backend logic with clean and efficient user experiences.",
 
@@ -33,7 +94,7 @@ export const aboutMe = {
   ],
 }
 
-export const skills = [
+export const skills: Skill[] = [
   { name: "JavaScript", level: 90 },
   { name: "Java", level: 85 },
   { name: "C++", level: 80 },
@@ -46,8 +107,7 @@ export const skills = [
   { name: "Computer Vision (MobileNet-SSD)", level: 75 },
 ]
 
-
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
     title: "Smart Traffic Management System",
@@ -55,7 +115,7 @@ export const projects = [
       "AI-based system using real-time vehicle detection (MobileNet-SSD) to dynamically control traffic signals via ESP8266, optimizing traffic flow and reducing idle wait times.",
     image: "/projects/traffic.jpg",
     technologies: ["Python", "OpenCV", "Android", "ESP8266"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/Smart-Traffic-Signals-using-AI-Object-Detection",
     featured: true,
   },
   {
@@ -120,7 +180,7 @@ export const projects = [
   },
 ];
 
-export const experience = [
+export const experience: Experience[] = [
   {
     id: 1,
     role: "Vanilla JavaScript Developer Intern",
@@ -143,21 +203,21 @@ export const experience = [
   },
 ];
 
-export const socialLinks = {
+export const socialLinks: SocialLinks = {
   github: "https://github.com/johndoe",
   linkedin: "https://www.linkedin.com/in/tejasmistry77",
   twitter: "https://twitter.com/johndoe",
   email: "tejasmistry2222@gmail.com",
 }
 
-export const navigation = [
+export const navigation: NavItem[] = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ]
 
-export const siteConfig = {
+export const siteConfig: SiteConfig = {
   title: "Tejas Mistry | Developer",
   description:
     "Computer Engineering student building full-stack applications, AR/VR experiences, and intelligent systems.",
