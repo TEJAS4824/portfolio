@@ -5,28 +5,31 @@
 
 export const personalInfo = {
   name: "Tejas Mistry",
-  title: "CSE Student",
-  tagline: "Building scalable apps, immersive XR experiences, and intelligent systems",
+  title: "Crafting Software, AI Systems & AR/VR Experiences",
+  tagline: "Creating Technology that solves problems, not just code that works.",
   description:
     "I’m a Computer Engineering student with hands-on experience across 3+ real-world projects in full-stack development, AR/VR, and intelligent systems.",
   location: "Vadodara, Gujarat, India",
-  email: "tejasmistry2017@gmail.com",
+  email: "tejasmistry2222@gmail.com",
   availability: "Open to opportunities",
   image: "/images/profile.jpg", // Update this with your own profile image
 }
 
 export const aboutMe = {
   paragraphs: [
-    "I’m a developer focused on building real-world, impactful applications across full-stack development, AR/VR, and intelligent systems. My work combines strong backend logic with clean and functional user experiences.",
-    "I have built systems ranging from a secure social media platform with authentication and real-time features to an immersive Air Traffic Control simulation in Unity XR based on Smart India Hackathon problem statements.",
-    "I also enjoy working on intelligent and hardware-integrated solutions, such as a vehicle detection system using MobileNet-SSD and ESP8266 for smart traffic management.",
-    "Apart from development, I have experience mentoring students as a C++ Academic Associate, helping them strengthen problem-solving and programming fundamentals.",
+    "I’m a developer focused on building real-world applications across full-stack development, AR/VR, and intelligent systems, combining strong backend logic with clean and efficient user experiences.",
+
+    "I have developed a secure social media platform with authentication and real-time features, and I am currently working on an AR/VR-based Air Traffic Controller simulation using Unity XR.",
+
+    "I have also worked on an intelligent traffic management system inspired by a Smart India Hackathon problem statement, integrating real-time vehicle detection with hardware-based signal control.",
+
+    "Additionally, I have mentored students in C++, helping them strengthen their programming fundamentals and problem-solving abilities.",
   ],
   highlights: [
     "3+ real-world projects (Web, AR/VR, AI/IoT)",
-    "Full-stack development with React, Node.js & PostgreSQL",
-    "Built SIH-based Air Traffic Control VR simulation",
-    "Mentored 20+ students in C++",
+    "Full-stack development (React, Node.js, PostgreSQL)",
+    "AR/VR Air Traffic Control simulation",
+    "Experience with AI-based vehicle detection systems",
   ],
 }
 
@@ -47,110 +50,104 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Smart Traffic Management System",
     description:
-      "A full-featured e-commerce platform built with Next.js and Stripe integration. Features include product management, cart functionality, and secure checkout.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    liveUrl: "https://example-ecommerce.com",
-    githubUrl: "https://github.com/johndoe/ecommerce-platform",
+      "AI-based system using real-time vehicle detection (MobileNet-SSD) to dynamically control traffic signals via ESP8266, optimizing traffic flow and reducing idle wait times.",
+    image: "/projects/traffic.jpg",
+    technologies: ["Python", "OpenCV", "Android", "ESP8266"],
+    githubUrl: "",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Contact Management System",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team workspaces.",
-    image: "/projects/taskapp.jpg",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "https://example-tasks.com",
-    githubUrl: "https://github.com/johndoe/task-manager",
+      "Java-based application for managing contacts with functionalities like add, search, update, and delete through a simple interface.",
+    image: "/projects/contact.jpg",
+    technologies: ["Java"],
+    githubUrl: "",
     featured: true,
   },
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "Air Traffic Controller (AR/VR Simulation)",
     description:
-      "A beautiful weather dashboard with location-based forecasts, interactive maps, and severe weather alerts.",
-    image: "/projects/weather.jpg",
-    technologies: ["JavaScript", "React", "OpenWeather API", "Chart.js"],
-    liveUrl: "https://example-weather.com",
-    githubUrl: "https://github.com/johndoe/weather-dashboard",
+      "Currently developing an immersive AR/VR simulation for real-time aircraft control, path management, and interactive 3D visualization using Unity XR.",
+    image: "/projects/atc.jpg",
+    technologies: ["Unity", "C#", "XR", "AR/VR"],
+    githubUrl: "",
     featured: true,
   },
   {
     id: 4,
-    title: "Portfolio Generator",
+    title: "Gatherly (Social Media Platform)",
     description:
-      "A CLI tool that generates beautiful portfolio websites from a simple configuration file.",
-    image: "/projects/portfolio-gen.jpg",
-    technologies: ["Node.js", "TypeScript", "Handlebars"],
-    liveUrl: null,
-    githubUrl: "https://github.com/johndoe/portfolio-generator",
-    featured: false,
+      "Full-stack social media platform featuring authentication, private/public profiles, follow system, notifications, and secure backend APIs.",
+    image: "/projects/social.jpg",
+    technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
+    githubUrl: "",
+    featured: true,
   },
   {
     id: 5,
-    title: "Code Snippet Manager",
+    title: "PDF Tool (JavaScript)",
     description:
-      "A VS Code extension for managing and organizing code snippets with syntax highlighting and search.",
-    image: "/projects/snippets.jpg",
-    technologies: ["TypeScript", "VS Code API", "SQLite"],
-    liveUrl: "https://marketplace.visualstudio.com/items?itemName=johndoe.snippets",
-    githubUrl: "https://github.com/johndoe/snippet-manager",
+      "A lightweight browser-based tool for basic PDF operations and manipulation using Vanilla JavaScript.",
+    image: "/projects/pdf.jpg",
+    technologies: ["JavaScript"],
+    githubUrl: "",
     featured: false,
   },
   {
     id: 6,
-    title: "API Rate Limiter",
+    title: "Bill Generator (C)",
     description:
-      "A flexible rate limiting middleware for Express.js with Redis backend support.",
-    image: "/projects/ratelimiter.jpg",
-    technologies: ["Node.js", "Express", "Redis", "TypeScript"],
-    liveUrl: null,
-    githubUrl: "https://github.com/johndoe/rate-limiter",
+      "Console-based billing application developed in C to generate invoices and perform basic calculations.",
+    image: "/projects/bill.jpg",
+    technologies: ["C"],
+    githubUrl: "",
     featured: false,
   },
-]
+  {
+    id: 7,
+    title: "To-Do List Application",
+    description:
+      "Simple task management application for adding, tracking, and organizing daily tasks.",
+    image: "/projects/todo.jpg",
+    technologies: ["JavaScript"],
+    githubUrl: "",
+    featured: false,
+  },
+];
 
 export const experience = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "TechCorp Inc.",
-    companyUrl: "https://techcorp.example.com",
-    period: "2023 — Present",
+    role: "Vanilla JavaScript Developer Intern",
+    company: "Technospot Technologies",
+    companyUrl: "",
+    period: "Dec 2024 — Jan 2025",
     description:
-      "Lead frontend development for the main product dashboard. Implement new features, optimize performance, and mentor junior developers.",
-    technologies: ["React", "TypeScript", "GraphQL", "TailwindCSS"],
+      "Developed interactive frontend components using Vanilla JavaScript and improved UI responsiveness.",
+    technologies: ["JavaScript", "HTML", "CSS"],
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "StartupXYZ",
-    companyUrl: "https://startupxyz.example.com",
-    period: "2021 — 2023",
+    role: "SQL Developer Intern",
+    company: "Soft Nexis Technologies",
+    companyUrl: "https://www.softnexis.com/",
+    period: "Nov 2025 — Dec 2025",
     description:
-      "Built and maintained multiple client-facing applications. Developed RESTful APIs and integrated third-party services.",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
+      "Worked on database design, optimized SQL queries, and handled structured data efficiently.",
+    technologies: ["SQL", "PostgreSQL"],
   },
-  {
-    id: 3,
-    role: "Junior Developer",
-    company: "WebAgency",
-    companyUrl: "https://webagency.example.com",
-    period: "2019 — 2021",
-    description:
-      "Developed responsive websites and web applications for various clients. Collaborated with designers to implement pixel-perfect UIs.",
-    technologies: ["JavaScript", "React", "CSS", "WordPress"],
-  },
-]
+];
 
 export const socialLinks = {
   github: "https://github.com/johndoe",
-  linkedin: "https://linkedin.com/in/johndoe",
+  linkedin: "https://www.linkedin.com/in/tejasmistry77",
   twitter: "https://twitter.com/johndoe",
-  email: "mailto:john@example.com",
+  email: "tejasmistry2222@gmail.com",
 }
 
 export const navigation = [
@@ -161,9 +158,9 @@ export const navigation = [
 ]
 
 export const siteConfig = {
-  title: "John Doe | JavaScript Developer",
+  title: "Tejas Mistry | Developer",
   description:
-    "JavaScript developer specializing in building exceptional digital experiences. View my projects and get in touch.",
-  url: "https://johndoe.dev",
-  ogImage: "/og-image.jpg",
+    "Computer Engineering student building full-stack applications, AR/VR experiences, and intelligent systems.",
+  url: "",
+  ogImage: "/images/profile.jpg",
 }
