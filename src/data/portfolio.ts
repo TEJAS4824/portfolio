@@ -148,8 +148,8 @@ export const projects: Project[] = [
       "Full-stack social media platform featuring authentication, private/public profiles, follow system, notifications, and secure backend APIs.",
     image: "/projects/social.jpg",
     technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/tejas2435/Gatherly",
+    liveUrl: "https://gatherly-lemon.vercel.app/",
     featured: true,
   },
   {
