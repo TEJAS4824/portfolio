@@ -149,7 +149,7 @@ export const projects: Project[] = [
     image: "/projects/social.jpg",
     technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
     githubUrl: "",
-    liveUrl: "https://gatherly-lemon.vercel.app/",
+    liveUrl: "",
     featured: true,
   },
   {

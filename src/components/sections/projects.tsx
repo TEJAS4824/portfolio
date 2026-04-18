@@ -94,15 +94,21 @@ export function Projects() {
                     0{index + 1}.
                   </motion.span>
                   <h3 className="text-3xl font-bold mb-4 group">
-                    <a 
-                      href={project.liveUrl || project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors inline-flex items-center gap-2"
-                    >
-                      {project.title}
-                      <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                    </a>
+                    {(project.liveUrl || project.githubUrl) ? (
+                      <a 
+                        href={project.liveUrl || project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors inline-flex items-center gap-2"
+                      >
+                        {project.title}
+                        <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-2">
+                        {project.title}
+                      </span>
+                    )}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                     {project.description}
@@ -192,10 +198,14 @@ export function Projects() {
                           )}
                         </div>
                       </div>
-                      <h4 className="text-xl font-semibold mb-3 hover:text-primary transition-colors">
-                        <a href={project.liveUrl || project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          {project.title}
-                        </a>
+                      <h4 className="text-xl font-semibold mb-3 transition-colors">
+                        {(project.liveUrl || project.githubUrl) ? (
+                          <a href={project.liveUrl || project.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                            {project.title}
+                          </a>
+                        ) : (
+                          <span>{project.title}</span>
+                        )}
                       </h4>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
                         {project.description}
