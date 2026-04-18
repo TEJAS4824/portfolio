@@ -102,9 +102,9 @@ export const skills: Skill[] = [
   { name: "Node.js", level: 85 },
   { name: "Express.js", level: 85 },
   { name: "PostgreSQL", level: 80 },
-  { name: "Unity (XR)", level: 82 },
-  { name: "Android (Java)", level: 75 },
-  { name: "Computer Vision (MobileNet-SSD)", level: 75 },
+  { name: "Unity (XR)", level: 78 },
+  { name: "Android (Java)", level: 60 },
+  { name: "Computer Vision (MobileNet-SSD)", level: 80 },
 ]
 
 export const projects: Project[] = [
@@ -126,7 +126,7 @@ export const projects: Project[] = [
       "Java-based application for managing contacts with functionalities like add, search, update, and delete through a simple interface.",
     image: "/projects/contact.jpg",
     technologies: ["Java"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/Contact-Managment-System-Java-",
     liveUrl: "",
     featured: true,
   },
@@ -159,7 +159,7 @@ export const projects: Project[] = [
       "A lightweight browser-based tool for basic PDF operations and manipulation using Vanilla JavaScript.",
     image: "/projects/pdf.jpg",
     technologies: ["JavaScript"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/PDF-Merger-",
     liveUrl: "",
     featured: false,
   },
@@ -170,7 +170,7 @@ export const projects: Project[] = [
       "Console-based billing application developed in C to generate invoices and perform basic calculations.",
     image: "/projects/bill.jpg",
     technologies: ["C"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/Bill-Generator-C-Language-",
     liveUrl: "",
     featured: false,
   },
@@ -181,7 +181,7 @@ export const projects: Project[] = [
       "Simple task management application for adding, tracking, and organizing daily tasks.",
     image: "/projects/todo.jpg",
     technologies: ["JavaScript"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/TODO-LIST-",
     liveUrl: "",
     featured: false,
   },
@@ -213,7 +213,7 @@ export const experience: Experience[] = [
 export const socialLinks: SocialLinks = {
   github: "https://github.com/tejas2435",
   linkedin: "https://www.linkedin.com/in/tejasmistry77",
-  twitter: "https://twitter.com/johndoe",
+  twitter: "https://x.com/TEJASMI21677047",
   email: "tejasmistry2222@gmail.com",
 }
 
