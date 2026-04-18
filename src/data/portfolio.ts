@@ -73,7 +73,7 @@ export const personalInfo: PersonalInfo = {
   location: "Vadodara, Gujarat, India",
   email: "tejasmistry2222@gmail.com",
   availability: "Open to opportunities",
-  image: "/images/profile.jpg", // Update this with your own profile image
+  image: "/images/profile.jpg",
 }
 
 export const aboutMe: AboutMe = {
@@ -116,6 +116,7 @@ export const projects: Project[] = [
     image: "/projects/traffic.jpg",
     technologies: ["Python", "OpenCV", "Android", "ESP8266"],
     githubUrl: "https://github.com/tejas2435/Smart-Traffic-Signals-using-AI-Object-Detection",
+    liveUrl: "",
     featured: true,
   },
   {
@@ -126,6 +127,7 @@ export const projects: Project[] = [
     image: "/projects/contact.jpg",
     technologies: ["Java"],
     githubUrl: "",
+    liveUrl: "",
     featured: true,
   },
   {
@@ -136,6 +138,7 @@ export const projects: Project[] = [
     image: "/projects/atc.jpg",
     technologies: ["Unity", "C#", "XR", "AR/VR"],
     githubUrl: "",
+    liveUrl: "",
     featured: true,
   },
   {
@@ -146,6 +149,7 @@ export const projects: Project[] = [
     image: "/projects/social.jpg",
     technologies: ["React", "Node.js", "Express", "PostgreSQL", "JWT"],
     githubUrl: "",
+    liveUrl: "https://gatherly-lemon.vercel.app/",
     featured: true,
   },
   {
@@ -156,6 +160,7 @@ export const projects: Project[] = [
     image: "/projects/pdf.jpg",
     technologies: ["JavaScript"],
     githubUrl: "",
+    liveUrl: "",
     featured: false,
   },
   {
@@ -166,6 +171,7 @@ export const projects: Project[] = [
     image: "/projects/bill.jpg",
     technologies: ["C"],
     githubUrl: "",
+    liveUrl: "",
     featured: false,
   },
   {
@@ -176,6 +182,7 @@ export const projects: Project[] = [
     image: "/projects/todo.jpg",
     technologies: ["JavaScript"],
     githubUrl: "",
+    liveUrl: "",
     featured: false,
   },
 ];
@@ -186,7 +193,7 @@ export const experience: Experience[] = [
     role: "Vanilla JavaScript Developer Intern",
     company: "Technospot Technologies",
     companyUrl: "",
-    period: "Dec 2024 — Jan 2025",
+    period: "Dec 2024—Jan 2025",
     description:
       "Developed interactive frontend components using Vanilla JavaScript and improved UI responsiveness.",
     technologies: ["JavaScript", "HTML", "CSS"],
@@ -196,7 +203,7 @@ export const experience: Experience[] = [
     role: "SQL Developer Intern",
     company: "Soft Nexis Technologies",
     companyUrl: "https://www.softnexis.com/",
-    period: "Nov 2025 — Dec 2025",
+    period: "Nov 2025—Dec 2025",
     description:
       "Worked on database design, optimized SQL queries, and handled structured data efficiently.",
     technologies: ["SQL", "PostgreSQL"],
@@ -204,7 +211,7 @@ export const experience: Experience[] = [
 ];
 
 export const socialLinks: SocialLinks = {
-  github: "https://github.com/johndoe",
+  github: "https://github.com/tejas2435",
   linkedin: "https://www.linkedin.com/in/tejasmistry77",
   twitter: "https://twitter.com/johndoe",
   email: "tejasmistry2222@gmail.com",
