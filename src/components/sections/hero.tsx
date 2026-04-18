@@ -195,8 +195,7 @@ export function Hero() {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -bottom-2 -left-2 w-10 h-10 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center shadow-lg"
           >
-            {/* <span className="text-lg text-primary"></span> */}
-            <span className="text-lg text-primary">{`{}`}</span>
+            <span className="text-2xl">{`{}`}</span>
           </motion.div>
         </motion.div>
       </div>
