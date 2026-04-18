@@ -60,15 +60,17 @@ export function Projects() {
                       Featured
                     </span>
                     <div className="flex items-center gap-2">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-background/50 backdrop-blur-sm text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label={`View ${project.title} on GitHub`}
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-background/50 backdrop-blur-sm text-muted-foreground hover:text-primary transition-colors"
+                          aria-label={`View ${project.title} on GitHub`}
+                        >
+                          <Github className="w-4 h-4" />
+                        </a>
+                      )}
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
@@ -124,17 +126,19 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex items-center gap-6">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group/link"
-                      aria-label={`View ${project.title} on GitHub`}
-                    >
-                      <Github className="w-5 h-5" />
-                      <span>View Code</span>
-                      <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group/link"
+                        aria-label={`View ${project.title} on GitHub`}
+                      >
+                        <Github className="w-5 h-5" />
+                        <span>View Code</span>
+                        <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
+                      </a>
+                    )}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
@@ -176,15 +180,17 @@ export function Projects() {
                           <Folder className="w-8 h-8" />
                         </div>
                         <div className="flex items-center gap-3">
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                            aria-label={`View ${project.title} on GitHub`}
-                          >
-                            <Github className="w-5 h-5" />
-                          </a>
+                          {project.githubUrl && (
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                              aria-label={`View ${project.title} on GitHub`}
+                            >
+                              <Github className="w-5 h-5" />
+                            </a>
+                          )}
                           {project.liveUrl && (
                             <a
                               href={project.liveUrl}

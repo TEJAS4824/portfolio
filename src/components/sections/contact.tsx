@@ -69,7 +69,7 @@ export function Contact() {
         >
           <MagneticButton className="inline-block cursor-pointer mb-16">
             <a
-              href={socialLinks.email}
+              href={`mailto:${socialLinks.email}`}
               className="group inline-flex items-center gap-3 px-10 py-5 text-lg font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30"
             >
               <Mail className="w-5 h-5" />
@@ -90,7 +90,7 @@ export function Contact() {
             { href: socialLinks.github, icon: Github, label: "GitHub" },
             { href: socialLinks.linkedin, icon: Linkedin, label: "LinkedIn" },
             { href: socialLinks.twitter, icon: Twitter, label: "Twitter" },
-            { href: socialLinks.email, icon: Mail, label: "Email" },
+            { href: `mailto:${socialLinks.email}`, icon: Mail, label: "Email" },
           ].map((social, i) => (
             <MagneticButton key={social.label} className="cursor-pointer">
               <motion.div
