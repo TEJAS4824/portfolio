@@ -196,7 +196,7 @@ export function Hero() {
             className="absolute -bottom-2 -left-2 w-10 h-10 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center shadow-lg"
           >
             {/* <span className="text-lg text-primary"></span> */}
-            <span className="text-lg text-primary">💻</span>
+            <span className="text-lg text-primary">{`{}`}</span>
           </motion.div>
         </motion.div>
       </div>
