@@ -95,16 +95,16 @@ export const aboutMe: AboutMe = {
 }
 
 export const skills: Skill[] = [
-  { name: "JavaScript", level: 90 },
+  { name: "JavaScript", level: 82 },
   { name: "Java", level: 85 },
   { name: "C++", level: 80 },
-  { name: "React.js", level: 88 },
-  { name: "Node.js", level: 85 },
-  { name: "Express.js", level: 85 },
-  { name: "PostgreSQL", level: 80 },
-  { name: "Unity (XR)", level: 78 },
-  { name: "Android (Java)", level: 60 },
-  { name: "Computer Vision (MobileNet-SSD)", level: 80 },
+  { name: "React.js", level: 79 },
+  { name: "Node.js", level: 78 },
+  { name: "Express.js", level: 73 },
+  { name: "PostgreSQL", level: 72 },
+  { name: "Unity (XR)", level: 60 },
+  { name: "Android (Java)", level: 83 },
+  { name: "Computer Vision (MobileNet-SSD)", level: 70 },
 ]
 
 export const projects: Project[] = [
