@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "Currently developing an immersive AR/VR simulation for real-time aircraft control, path management, and interactive 3D visualization using Unity XR.",
     image: "/projects/atc.jpg",
     technologies: ["Unity", "C#", "XR", "AR/VR"],
-    githubUrl: "",
+    githubUrl: "https://github.com/tejas2435/Air-Traffic-Controller",
     liveUrl: "",
     featured: true,
   },
