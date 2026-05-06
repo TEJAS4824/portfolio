@@ -13,7 +13,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,pdf}'],
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         skipWaiting: true,
