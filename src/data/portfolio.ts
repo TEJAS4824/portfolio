@@ -116,7 +116,7 @@ export const projects: Project[] = [
     image: "/projects/traffic.jpg",
     technologies: ["Python", "OpenCV", "Android", "ESP8266"],
     githubUrl: "https://github.com/tejas2435/Smart-Traffic-Signals-using-AI-Object-Detection",
-    liveUrl: "",
+    liveUrl: "https://www.linkedin.com/posts/tejasmistry77_smarttraffic-iot-opencv-ugcPost-7333427598384852992-WaXm",
     featured: true,
   },
   {
