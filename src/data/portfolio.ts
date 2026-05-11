@@ -138,7 +138,7 @@ export const projects: Project[] = [
     image: "/projects/atc.jpg",
     technologies: ["Unity", "C#", "XR", "AR/VR"],
     githubUrl: "https://github.com/tejas2435/Air-Traffic-Controller",
-    liveUrl: "",
+    liveUrl: "https://play.unity.com/api/v1/games/game/a564be52-eb2c-4b93-83a6-7d3c5140b342/build/latest/frame",
     featured: true,
   },
   {
