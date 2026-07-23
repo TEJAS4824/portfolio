@@ -16,15 +16,15 @@ export function Projects() {
   return (
     <SectionWrapper id="projects" className="px-6 py-32 md:px-12 lg:px-24 relative">
       <div className="absolute top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
-      
+
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center gap-4 mb-16">
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 48 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="h-px bg-gradient-to-r from-primary to-transparent" 
+            className="h-px bg-gradient-to-r from-primary to-transparent"
           />
           <h2 className="text-sm font-medium tracking-widest uppercase text-primary">
             Projects
@@ -36,25 +36,32 @@ export function Projects() {
           {featuredProjects.map((project, index) => (
             <StaggerItem key={project.id}>
               <motion.div
-                className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-dense" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""
+                  }`}
               >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-secondary to-secondary/50 border border-border/50 group ${
-                    index % 2 === 1 ? "lg:col-start-2" : ""
-                  }`}
+                  className={`relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-secondary to-secondary/50 border border-border/50 group ${index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Code2 className="w-20 h-20 text-muted-foreground/20 group-hover:text-primary/30 transition-colors duration-500" />
-                  </div>
-                  
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Code2 className="w-20 h-20 text-muted-foreground/20 group-hover:text-primary/30 transition-colors duration-500" />
+                    </div>
+                  )}
+
                   {/* Animated gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                     <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/20 text-primary backdrop-blur-sm border border-primary/20">
                       Featured
@@ -87,7 +94,7 @@ export function Projects() {
                 </motion.div>
 
                 <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                  <motion.span 
+                  <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -97,7 +104,7 @@ export function Projects() {
                   </motion.span>
                   <h3 className="text-3xl font-bold mb-4 group">
                     {(project.liveUrl || project.githubUrl) ? (
-                      <a 
+                      <a
                         href={project.liveUrl || project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"

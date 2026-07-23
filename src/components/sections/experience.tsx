@@ -46,7 +46,7 @@ export function Experience() {
                     className="absolute left-0 md:left-[200px] lg:left-[240px] top-1 w-3 h-3 -ml-1.5 rounded-full bg-primary border-4 border-background hidden md:block shadow-lg shadow-primary/30"
                   />
                   
-                  <div className="text-sm text-muted-foreground font-mono">
+                  <div className="text-sm text-muted-foreground font-mono md:pr-8 lg:pr-10">
                     <div className="flex items-center gap-2 md:justify-end">
                       <Briefcase className="w-4 h-4 text-primary md:hidden" />
                       {job.period}

@@ -12,7 +12,7 @@ import { PWAProvider } from "@/components/pwa/pwa-provider"
 function App() {
   return (
     <PWAProvider>
-      <main className="relative min-h-screen">
+      <main className="relative min-h-screen overflow-x-hidden">
         <AnimatedBackground />
         <FloatingNav />
         <OfflineIndicator />

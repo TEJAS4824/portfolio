@@ -1,0 +1,115 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#121620"/>
+  
+  <!-- Grid backdrop -->
+  <g stroke="#ffffff" stroke-opacity="0.02" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Glowing gradients & filters -->
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64C8B4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central Phone/Mockup Feed Area -->
+  <rect x="250" y="40" width="300" height="370" rx="20" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" />
+  
+  <!-- Feed Header inside Phone -->
+  <path d="M250 85 H550" stroke="#334155" stroke-width="1.5" />
+  <circle cx="280" cy="62" r="12" fill="#64C8B4" fill-opacity="0.2" stroke="#64C8B4" stroke-width="1"/>
+  <text x="277" y="66" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">G</text>
+  <text x="300" y="66" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Gatherly</text>
+  
+  <!-- Search/Create icon inside phone header -->
+  <circle cx="515" cy="62" r="8" stroke="#94a3b8" stroke-width="1.5" />
+  <line x1="520" y1="67" x2="525" y2="72" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Post Card 1 inside phone -->
+  <rect x="265" y="100" width="270" height="135" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <!-- User info in Post -->
+  <circle cx="290" cy="125" r="14" fill="#64C8B4" fill-opacity="0.2" stroke="#64C8B4" stroke-width="1"/>
+  <text x="284" y="129" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">TM</text>
+  <text x="312" y="122" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Tejas Mistry</text>
+  <text x="312" y="134" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">@tejas2435 • 2h</text>
+  <!-- Post text -->
+  <text x="280" y="160" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Just launched Gatherly! Built with React,</text>
+  <text x="280" y="176" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Node, and PostgreSQL. 🚀 Check it out!</text>
+  <!-- Post actions -->
+  <path d="M280 205 L285 200 L290 205 L285 210 Z" fill="#f43f5e" /> <!-- heart -->
+  <text x="296" y="208" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">24</text>
+  
+  <path d="M340 201 H352 V209 H346 L342 212 V209 Z" stroke="#94a3b8" stroke-width="1" fill="none" /> <!-- comment -->
+  <text x="357" y="208" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">8</text>
+
+  <!-- Post Card 2 inside phone (partial view) -->
+  <rect x="265" y="250" width="270" height="135" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <circle cx="290" cy="275" r="14" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+  <text x="312" y="272" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Sarah Connor</text>
+  <text x="312" y="284" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">@sarah • 4h</text>
+  <text x="280" y="310" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">Loving the clean dark UI design on this!</text>
+
+  <!-- Sidebar Overlay Notification Card (Left) -->
+  <g transform="translate(40, 160)">
+    <rect width="180" height="90" rx="12" fill="#1e293b" fill-opacity="0.9" stroke="#64C8B4" stroke-opacity="0.4" stroke-width="1.5" filter="url(#neonGlow)"/>
+    <circle cx="35" cy="45" r="18" fill="#64C8B4" fill-opacity="0.2" stroke="#64C8B4" stroke-width="1" />
+    <path d="M35 37 L30 45 H40 M32 45 V51 H38 V45" fill="none" stroke="#64C8B4" stroke-width="1.5" />
+    <text x="65" y="38" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">NOTIFICATION</text>
+    <text x="65" y="54" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">New Follower</text>
+    <text x="65" y="68" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">@alex_dev followed you</text>
+  </g>
+
+  <!-- Floating Stats Badge (Right) -->
+  <g transform="translate(580, 100)">
+    <rect width="180" height="110" rx="12" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.5" />
+    <text x="20" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">LIVE STATS</text>
+    <text x="20" y="65" fill="#ffffff" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">4.2K+</text>
+    <text x="20" y="85" fill="#10b981" font-family="monospace" font-size="11" font-weight="bold">▲ 12.4% ACTIVE</text>
+    <circle cx="150" cy="55" r="15" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.5" />
+    <path d="M145 60 L150 50 L155 60" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Floating Direct Messages Box (Bottom Right) -->
+  <g transform="translate(580, 240)">
+    <rect width="180" height="110" rx="12" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.5" />
+    <text x="20" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">MESSAGES</text>
+    <circle cx="35" cy="65" r="12" fill="#f43f5e" fill-opacity="0.2" stroke="#f43f5e" stroke-width="1" />
+    <text x="32" y="69" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">A</text>
+    <text x="55" y="60" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Alex Jones</text>
+    <text x="55" y="73" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Hey, love the app!</text>
+    <!-- Unread badge -->
+    <circle cx="155" cy="65" r="6" fill="#f43f5e" filter="url(#neonGlow)"/>
+  </g>
+</svg>

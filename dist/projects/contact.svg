@@ -1,0 +1,99 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#121620"/>
+  
+  <!-- Subtle grid back layout -->
+  <g stroke="#ffffff" stroke-opacity="0.02" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Glowing gradients & filters -->
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64C8B4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Sidebar (Contact List) -->
+  <rect x="40" y="40" width="240" height="370" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+  <text x="60" y="75" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Contacts</text>
+  <line x1="40" y1="95" x2="280" y2="95" stroke="#334155" stroke-width="1" />
+
+  <!-- Active List Item -->
+  <rect x="50" y="110" width="220" height="50" rx="8" fill="#64C8B4" fill-opacity="0.1" stroke="#64C8B4" stroke-opacity="0.5" stroke-width="1" />
+  <circle cx="80" cy="135" r="16" fill="#64C8B4" fill-opacity="0.2" stroke="#64C8B4" stroke-width="1"/>
+  <text x="75" y="140" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">TM</text>
+  <text x="110" y="130" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Tejas Mistry</text>
+  <text x="110" y="146" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Developer</text>
+  
+  <!-- List Item 2 -->
+  <circle cx="80" cy="195" r="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="110" y="190" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Alex Jones</text>
+  <text x="110" y="206" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Product Manager</text>
+
+  <!-- List Item 3 -->
+  <circle cx="80" cy="255" r="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="110" y="250" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Sarah Connor</text>
+  <text x="110" y="266" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">UI/UX Designer</text>
+
+  <!-- List Item 4 -->
+  <circle cx="80" cy="315" r="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="110" y="310" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Bruce Wayne</text>
+  <text x="110" y="326" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">CEO</text>
+
+  <!-- Right Detail Card -->
+  <rect x="310" y="40" width="450" height="370" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Back / Action buttons -->
+  <circle cx="345" cy="75" r="15" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <path d="M349 75 H341 M345 71 L341 75 L345 79" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Profile Header -->
+  <circle cx="535" cy="120" r="45" fill="none" stroke="url(#mintGrad)" stroke-width="3" filter="url(#neonGlow)" />
+  <circle cx="535" cy="120" r="38" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="522" y="128" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" filter="url(#neonGlow)">TM</text>
+  
+  <text x="535" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Tejas Mistry</text>
+  <text x="535" y="215" text-anchor="middle" fill="#64C8B4" font-family="monospace" font-size="12" font-weight="bold">SOFTWARE DEVELOPER</text>
+
+  <!-- Details Area -->
+  <rect x="340" y="245" width="390" height="135" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  
+  <!-- Info Row 1 -->
+  <text x="360" y="275" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">EMAIL</text>
+  <text x="360" y="295" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">tejasmistry2222@gmail.com</text>
+  
+  <!-- Info Row 2 -->
+  <text x="360" y="335" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">PHONE</text>
+  <text x="360" y="355" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">+91 98765 43210</text>
+  
+  <!-- Info Row 3 (Right aligned) -->
+  <text x="570" y="335" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">GITHUB</text>
+  <text x="570" y="355" fill="#64C8B4" font-family="system-ui, sans-serif" font-size="13">github.com/tejas2435</text>
+</svg>

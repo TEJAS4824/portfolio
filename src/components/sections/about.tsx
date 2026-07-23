@@ -41,15 +41,15 @@ export function About() {
   return (
     <SectionWrapper id="about" className="px-6 py-32 md:px-12 lg:px-24 relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
-      
+
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center gap-4 mb-16">
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 48 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="h-px bg-gradient-to-r from-primary to-transparent" 
+            className="h-px bg-gradient-to-r from-primary to-transparent"
           />
           <h2 className="text-sm font-medium tracking-widest uppercase text-primary">
             About
@@ -102,7 +102,7 @@ export function About() {
               ))}
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -110,7 +110,7 @@ export function About() {
               className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20"
             >
               <p className="text-sm text-muted-foreground">
-                <span className="text-primary font-semibold">Always learning.</span> Currently exploring AI/ML integration, WebAssembly, and advanced animation techniques.
+                <span className="text-primary font-semibold">Always learning.</span> Currently exploring AI-driven solutions, enterprise software engineering, and next-generation interactive experiences.
               </p>
             </motion.div>
           </div>
